@@ -1,0 +1,4 @@
+.ghc.environment*
+*.o
+*.hi
+count-lines
