@@ -171,3 +171,28 @@ Running GC:
 Prelude Utils> System.Mem.performGC
 ```
 
+Bonus material: Strict and unpacked fields
+------------------------------------------
+
+Read `UnpackedFields.hs` and play around with it.
+How do the closures look like?
+What effect does evaluation have?
+
+It requires a careful dance to make ghci actually use the compiled code with
+optimization (without optimization, the pragmas take no effect):
+
+```
+$ ghc -dynamic -O -c UnpackedFields.hs Utils.hs
+$ ghci -fobject-code Utils UnpackedFields
+```
+At this point, make sure it says
+```
+Ok, two modules loaded.
+```
+and _not_ someting about `interpreted` or `Compiling...`
+
+Then use
+```
+> :m UnpackedFields Utils
+```
+
