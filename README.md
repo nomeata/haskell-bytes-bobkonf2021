@@ -16,7 +16,7 @@ easier to use a virtual machine.
 
 * Install some distribution packages required for GHC:
   ```
-  apt install build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+  apt install build-essential curl libffi-dev libgmp-dev libncurses-dev
   ```
 
 * Install ghcup
