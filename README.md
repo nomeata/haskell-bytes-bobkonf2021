@@ -10,6 +10,10 @@ Setup
 These instructions apply to a Debian or Ubuntu-like system. If you know what
 you are doing you can of course apply your own preferred methods.
 
+Unfortunately, building and running the following is non-trivial on Windows and
+OSX. You can try to get it working (before the workshop), but it might be
+easier to use a virtual machine.
+
 * Install some distribution packages required for GHC:
   ```
   apt install build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
