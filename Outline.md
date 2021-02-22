@@ -83,6 +83,13 @@ Play around with
    what has changed?
 
 
+Things to try on your own:
+
+* Do all letters refer to static memory after GC? Try ☃!
+
+* What about other data types? Try your own!
+
+
 A visual tool
 -------------
 
