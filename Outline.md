@@ -4,7 +4,7 @@ Outline
 Welcome
 -------
 
-Check that setup works
+Check that setup works. Who has it installed? (Maybe form groups already now.)
 
 Teaser
 ------
@@ -102,6 +102,7 @@ Also, now lets use a visual tool ([ghc-vis](http://felsin9.de/nnis/ghc-vis/)):
    ```
  * Adding a value to the view
    ```
+   let s = "some expression"
    :view s
    ```
  * Update (e.g. after evaluation):
@@ -122,7 +123,7 @@ Infinite lists
 
 Read `InfLists.hs` and in
 ```
-ghci -fobject-code InfLists
+ghci -O -fobject-code InfLists
 ```
 (with ghc-vis) play around with `l`, `nl`, `l2`, `nl2`.
 
@@ -131,7 +132,7 @@ Prime sieve
 
 Read `Sieve.hs`, and in
 ```
-ghci -fobject-code InfLists
+ghci -O -fobject-code Sieve
 ```
 (with ghc-vis) play around with `primes`.
 
@@ -141,7 +142,7 @@ Bonus material: Function pointers
 
 To compile modules and then load into GHCI, let’s use:
 ```
-ghci -fobject-code
+ghci -O -fobject-code
 ```
 and play around with it.
 
@@ -178,6 +179,13 @@ Running GC:
 Prelude Utils> System.Mem.performGC
 ```
 
+Bonus material:
+---------------
+
+The other `count` function in `Count.hs`.
+What is their difference, and why do they behave differently?
+What effect does optimization have?
+
 Bonus material: Strict and unpacked fields
 ------------------------------------------
 
@@ -185,21 +193,8 @@ Read `UnpackedFields.hs` and play around with it.
 How do the closures look like?
 What effect does evaluation have?
 
-It requires a careful dance to make ghci actually use the compiled code with
-optimization (without optimization, the pragmas take no effect):
-
+It is imporant to load things with -O here. Maybe delete the `*.o` files before, to be extra sure.
 ```
-$ ghc -dynamic -O -c UnpackedFields.hs Utils.hs
-$ ghci -fobject-code Utils UnpackedFields
-```
-At this point, make sure it says
-```
-Ok, two modules loaded.
-```
-and _not_ someting about `interpreted` or `Compiling...`
-
-Then use
-```
+$ ghci -O -fobject-code Utils UnpackedFields
 > :m UnpackedFields Utils
 ```
-
