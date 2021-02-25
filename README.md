@@ -53,6 +53,12 @@ easier to use a virtual machine.
   sudo apt install pkg-config libcairo2-dev librsvg2-dev libgtk-3-dev
   cabal install --env . --lib ghc-vis
   ```
+  Make sure to install at least `ghc-vis-0.9.2` and `xdot-0.3.0.3`. Especially
+  `stack` seems to prefer older versions by default, which will trigger a
+  gtk2hs bug that looks like
+  ```
+  free(): double free detected in tcache 2
+  ```
 
 * Check that it works:
 
