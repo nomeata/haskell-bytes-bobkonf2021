@@ -4,6 +4,14 @@
 Welcome to the Haskell Bytes tutorial. This repository contains setup
 instructions.
 
+Links
+-----
+
+Previous versions of this talk:
+
+ * Galois Tech Talk, 2014-06-13, English. [Transcript](http://www.joachim-breitner.de/publications/haskell_bytes_portland_2014-06-13.pdf) [Video](http://vimeo.com/100166511)
+ * fun-fr, 2013-07-03, German. [Transkript](http://www.joachim-breitner.de/publications/haskell_bytes_freiburg_2013-07-03.pdf)
+
 Setup
 -----
 
