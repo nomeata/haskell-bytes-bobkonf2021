@@ -127,6 +127,13 @@ ghci -O -fobject-code InfLists
 ```
 (with ghc-vis) play around with `l`, `nl`, `l2`, `nl2`.
 
+Things to try on your own:
+
+* How do the standard functions `repeat` and `cycle` look like?
+
+* Are there functions that you can use on these lists that do _not_ break the
+  properties of these cycles?
+
 Prime sieve
 -----------
 
